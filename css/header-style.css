@@ -1,0 +1,127 @@
+* {
+    font-size: 10px;
+
+    margin: 0;
+    padding: 0;
+}
+/*------------------------------------------------*/
+/*Header*/
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: black;
+}
+
+header .what-it-is {
+    padding: 1rem 1rem 1rem 1rem;
+    margin-right: 2rem;
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+h1 {
+    color: white;
+
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 40px;
+
+    font-size: 4rem;
+}
+
+h1:hover {
+    color: tomato;
+}
+
+.what-it-is {
+    background-color: white;
+    color: black;
+    font-size: 12px;
+}
+
+.what-it-is:hover {
+    background-color: tomato;
+
+    font-size: 15px;
+}
+
+/*------------------------------------------------*/
+/*Navigation menu*/
+ul {
+    list-style-type: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+nav {
+    background-color: black;
+
+    position: sticky;
+    top: 0;
+}
+
+.home-link {
+    border-left: black solid 0.2rem;
+}
+
+/*------------------------------------------------*/
+/*Styling links*/
+a {
+    text-decoration: none;
+    text-align: center;
+    font-size: 2rem;
+
+    border: 1px black solid;
+    padding: 20px;
+    width: 20%;
+}
+
+a:link {
+    background-color: white;
+    color: black;
+}
+
+a:visited {
+    color: black;
+}
+
+a:hover {
+    font-size: 2.5rem;
+}
+/*Home link*/
+.home-link:hover {
+    background-color: indigo;
+    color: orangered;
+}
+/*Bubble link*/
+.bubble-link:hover{
+    background-color: tomato;
+    
+}
+/*Rectangle link*/
+.rectangle-link:hover{
+    background-color: yellowgreen;
+}
+/*Third link*/
+.third-link:hover{
+    background-color: cornflowerblue;
+}
+/*End link*/
+.end-link:hover{
+    background-color: indigo;
+    color: orangered;
+}
+
+/*Footer*/
+footer h3{
+    font-size: 2rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+    margin-top: 1rem;
+    margin-left: 3rem;
+}

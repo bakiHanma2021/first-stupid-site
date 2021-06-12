@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="css/header-style.css">
+    <link rel="stylesheet" href="css/first-game-style.css">
+    <!--<link rel="stylesheet" href="css/second-game-style.css">-->
+    <link rel="stylesheet" href="css/responsive-style.css">
+
+    <script src="js/main.js" defer></script>
+    <!--<script src="js/second-game.js" defer></script>-->
+
+    <title>CP-1</title>    
+</head>
+<body>
+    <header>
+        <h1>Bubble game</h1>
+        <p class="what-it-is">What it is</p>
+    </header>
+
+    <main>
+        <nav>
+            <ul class="nav-menu">
+                <a class="home-link" href="#">Home</a>
+                <a href="#canvas" id="move-1-game" class="bubble-link">Bubble</a>
+                <a href="#article" class="rectangle-link">Rectangle</a>
+                <a href="#gaolang" class="third-link">Gaolang</a>
+                <a href="#footer" class="end-link">End</a>
+            </ul>
+        </nav>
+
+        <!--<div class="raw-text">
+            Just a text for test
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur delectus velit a modi. Minus minima earum, aut molestias corrupti quasi quae possimus nesciunt ut beatae, totam cumque dignissimos nisi harum.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex necessitatibus laudantium quisquam placeat aspernatur repudiandae ipsam ipsum. Corrupti autem nam ullam, quasi obcaecati reiciendis dolorem vitae ipsa natus unde nobis!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex necessitatibus laudantium quisquam placeat aspernatur repudiandae ipsam ipsum. Corrupti autem nam ullam, quasi obcaecati reiciendis dolorem vitae ipsa natus unde nobis!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex necessitatibus laudantium quisquam placeat aspernatur repudiandae ipsam ipsum. Corrupti autem nam ullam, quasi obcaecati reiciendis dolorem vitae ipsa natus unde nobis!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex necessitatibus laudantium quisquam placeat aspernatur repudiandae ipsam ipsum. Corrupti autem nam ullam, quasi obcaecati reiciendis dolorem vitae ipsa natus unde nobis!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex necessitatibus laudantium quisquam placeat aspernatur repudiandae ipsam ipsum. Corrupti autem nam ullam, quasi obcaecati reiciendis dolorem vitae ipsa natus unde nobis!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex necessitatibus laudantium quisquam placeat aspernatur repudiandae ipsam ipsum. Corrupti autem nam ullam, quasi obcaecati reiciendis dolorem vitae ipsa natus unde nobis!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex necessitatibus laudantium quisquam placeat aspernatur repudiandae ipsam ipsum. Corrupti autem nam ullam, quasi obcaecati reiciendis dolorem vitae ipsa natus unde nobis!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex necessitatibus laudantium quisquam placeat aspernatur repudiandae ipsam ipsum. Corrupti autem nam ullam, quasi obcaecati reiciendis dolorem vitae ipsa natus unde nobis!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex necessitatibus laudantium quisquam placeat aspernatur repudiandae ipsam ipsum. Corrupti autem nam ullam, quasi obcaecati reiciendis dolorem vitae ipsa natus unde nobis!</p>
+        </div>-->
+
+        <section class="first-game">
+            <!--The game begins here-->
+            <h2>Bubble game</h2>
+            <p class="bubble-text">Press the button to create bubbles!</p>
+            <div>
+                <canvas class="canvas-first-game"></canvas>
+            </div>
+            <!--Forms begin is here-->
+            <div class="form-1">
+                <div>
+                    <label for="enter-color">Enter color: </label>
+                    <input type="text" class="color-input" placeholder="Multicolored by default">
+                </div>
+                
+                <div>
+                    <label for="enter-number-of-circles">Number of circles: </label>
+                    <input type="text" class="number-input" placeholder="Default = 100">
+                </div>
+                
+                <div class="div-buttton-first-game">
+                    <button class="first-game-button">Bubble!</button>
+                </div>
+            </div>
+
+        </section>
+
+        <!--<article class="second-game">
+            <h2>Rectangle game</h2>
+            <p class="rectangle-text">Click to change color!</p>
+            <div class="parent-div">
+
+            </div>
+        </article>-->
+    </main>
+
+    <footer>
+        <div><h3>Created by Butorin Vladislav. TPU, 8K02. </h3>  </div>
+    </footer>
+
+    <!--Canvas part-->
+    <script>
+        const canvas = document.querySelector('canvas');
+        const ctx = canvas.getContext('2d');
+        /*------------------------------------------------*/
+        let WIDTH = document.documentElement.clientWidth;
+        let HEIGHT = 300;
+        /*------------------------------------------------*/
+        canvas.width = WIDTH;
+        canvas.height = HEIGHT;
+        /*let HEIGHT = document.documentElement.clientHeight;*/
+
+        const btnFirstGame = document.querySelector('button');
+
+        //const inputTextColor = document.querySelector('.color-input').value;
+        //const inputTextNumber = document.querySelector('.number-input').value;
+        //let text2 = document.getElementById('111').value;
+        //let numberOfCircles = inputTextNumber;
+
+        function random(number){
+            return Math.floor(Math.random()*number);
+        }
+
+        function bubbleIt(){
+            /*Also this button takes user`s input*/
+            //const inputText = document.querySelector('input').value;
+            const inputTextNumber = document.querySelector('.number-input').value;
+            let numberOfCircles = inputTextNumber;
+            if (numberOfCircles === ''){numberOfCircles = 100;} 
+
+            const inputTextColor = document.querySelector('.color-input').value;
+
+            ctx.clearRect(0,0,WIDTH, HEIGHT);
+
+            for(let i = 0; i < numberOfCircles; ++i){
+                ctx.beginPath();
+                if (inputTextColor === ''){
+                    ctx.fillStyle = `rgb(${Math.random()*255}, ${Math.random()*255}, ${Math.random()*255}, ${Math.random()} )`;
+                } else {
+                    ctx.fillStyle = inputTextColor;
+                }
+                ctx.arc(random(WIDTH), random(HEIGHT), random(50), 0, 2 * Math.PI);
+                ctx.fill();
+            }
+        }
+
+        btnFirstGame.addEventListener('click', bubbleIt);
+
+    </script>
+
+</body>
+</html>

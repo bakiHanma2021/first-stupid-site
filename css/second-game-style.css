@@ -1,0 +1,26 @@
+/*------------------------------------------------*/
+/*Second(rectangle) game*/
+
+.rectangle-text {
+    text-align: center;
+    font-size: 1.7rem;
+
+    background-color: yellowgreen;
+    /*margin-top: 0.5rem;*/
+}
+
+article div {
+    /*display: flex;*/
+
+    /*width: calc(100% - 4px);*/
+    height: 10rem;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+
+    /*padding: 5rem;*/
+    background-color: white;
+    border: 2px black solid;
+}
+
+/*------------------------------------------------*/

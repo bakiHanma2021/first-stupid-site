@@ -1,0 +1,68 @@
+/*------------------------------------------------*/
+/*Main*/
+
+h2 {
+    font-size: 2rem;
+    text-align: center;
+
+    background-color: yellowgreen;
+}
+
+.bubble-text {
+    text-align: center;
+    font-size: 1.7rem;
+
+    background-color: yellowgreen;
+    /*margin-top: 0.5rem;*/
+}
+
+section {
+    /*background-color: tomato;*/
+    margin: auto;
+    text-align: center;
+    display: block;
+}
+
+div p {
+    font-size: 1.8rem;
+}
+
+article {
+    background-color: yellowgreen;
+}
+/*------------------------------------------------*/
+/*Forms*/
+.form-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: paleturquoise;
+    border: black 1.5px solid;
+}
+
+label {
+    font-size: 2rem;
+    margin-left: 1rem;
+}
+
+input {
+    height: 2rem;
+    font-size: 2rem;
+
+    margin-right: 1rem;
+}
+
+.first-game-button {
+    padding: 1rem 2rem 1rem 2rem;
+    font-size: 1.5rem;
+
+    margin-right: 1rem;
+}
+
+.first-game-button:hover {
+    background-color: teal;
+    color: white;
+
+    font-weight: 900;
+}

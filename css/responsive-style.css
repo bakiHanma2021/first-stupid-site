@@ -1,0 +1,77 @@
+/*------------------------------------------------*/
+/*Responsive design*/
+
+/*
+@media (max-width: 1100px){
+    
+}*/
+
+/*
+@media (max-width: 850px){
+    article div {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+
+        /*gap: 1rem;*//*
+    }
+    /*.div-button-first-game {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }*/
+/*}
+/*
+@media (max-width: 630px){
+    .form-1 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    
+        background-color: paleturquoise;
+        border: black 1.5px solid;
+    }  
+
+    .first-game-button {
+        padding: 1rem 2rem 1rem 2rem;
+        font-size: 1.5rem;
+    
+        margin-right: 1rem;
+        margin-left: 1rem;
+
+        margin: auto;
+    
+        /*display: flex;
+        align-items: center;*/
+    /*}  
+/*
+    article div {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+/*
+@media (max-width: 450px){
+    article div {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        height: 3rem;
+    }
+
+    /*Navigation menu*//*
+    ul {
+        list-style-type: none;
+
+        display: block;
+
+        /*display: flex;
+        align-items: center;
+        justify-content: space-around;*/
+    /*}/*
+
+    nav {
+        background-color: black;
+
+        position: relative;
+        top: 0;
+    }
+}
+*/
